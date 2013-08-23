@@ -3,7 +3,7 @@ import scipy.integrate.lsoda as _lsoda
 
 def fex(t, y):
     ydot = np.zeros(3)
-    ydot[0] = -0.04 * y[0] + 1.0 * y[1] * y[2]
+    ydot[0] = -0.04 * y[0] + 1.0e4 * y[1] * y[2]
     ydot[2] = 3.0e7 * y[1] * y[1]
     ydot[1] = -ydot[0] - ydot[2]
     return ydot
